@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página web</title>
+    <title>Grupo 17</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- las dos lineas siguientes son para implementar vue.js y la libreria axios -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    
+    <!-- barra de navegacion en el header -->
     <header class="header" id="inicio">
         <img class="hamburguer" src="img/hamburguesa.svg" alt="">
         <nav class="menu-navegacion">
@@ -19,28 +22,30 @@
                 <a href="#expertos">Especializados</a>
                 <a href="#footer">Contacto</a>
         </nav>
+        <!-- titulo principal de la pagina -->
         <div class="contenedor head">
-            <h1 class="titulo">Convertimos tus ideas en una realidad</h1>
+            <h1 class="titulo">Te llevamos al sitio de tus sueños</h1>
             <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <p class="copy">by Grupo17</p>
         </div>
-        
+
     </header>
     <main>
         <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro servicio</h2>
+            <h2 class="subtitulo">Nuestros servicios</h2>
             <div class="contenedor-servicio">
                 <img src="img/checklist.svg" alt="">
                 <div class="checklist-servicio">
                     <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Diseño web</h3>
+                        <h3 class="n-service"><span class="number">1</span>Viajes por el mundo</h3>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
                     </div>
                     <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Diseño web</h3>
+                        <h3 class="n-service"><span class="number">2</span>Hoteles de primer nivel</h3>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
                     </div>
                     <div class="service">
-                        <h3 class="n-service"><span class="number">3</span>Diseño web</h3>
+                        <h3 class="n-service"><span class="number">3</span>Paquetes de excursiones</h3>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
                     </div>
                 </div>
@@ -48,17 +53,30 @@
         </section>
         <section class="gallery" id="galeria">
             <div class="contenedor">
-                <h2 class="subtitulo">Galeria</h2>
+                <h2 class="subtitulo">Galeria de Imágenes</h2>
                 <div class="contenedor-galeria">
-                    <img src="img/uno.jpg" class="img-galeria" alt="Hola">
+                    <img src="img/uno.jpg" class="img-galeria" alt="">
                     <img src="img/dos.jpg" class="img-galeria" alt="">
                     <img src="img/tres.jpg" class="img-galeria" alt="">
                     <img src="img/cuatro.jpg" class="img-galeria" alt="">
                     <img src="img/cinco.jpg" class="img-galeria" alt="">
                     <img src="img/seis.jpg" class="img-galeria" alt="">
+                    <div id="app">
+                        <div class="contenedor-galeria" v-for="photo in photos" :key="photo.id">
+                            <img :src="photo.urls.regular" class="img-galeria" :alt="photo.description">
+                        </div>
+                    </div>    
                 </div>
             </div>
-        </section>
+        </section>    
+        <!-- intentando implementar imagenes desde una api -->
+        <!-- <section class="gallery" id="galeria">
+            <div class="contenedor-galeria" id="app">
+                <div v-for="photo in photos" :key="photo.id">
+                    <img :src="photo.urls.regular" class="img-galeria" :alt="photo.description">
+                </div>
+            </div>        
+        </section> -->
         <div class="imagen-light">
             <img src="img/close.svg" alt="" class="close">
             <img src="" alt="" class="agregar-imagen">
@@ -68,26 +86,28 @@
             <section class="experts">
                 <div class="cont-expert">
                     <img src="img/pie_chart.svg" alt="">
-                    <h3 class="n-expert">Analytics</h3>
+                    <h3 class="n-expert">Viajes</h3>
                 </div>
                 <div class="cont-expert">
                     <img src="img/search_engine.svg" alt="">
-                    <h3 class="n-expert">SEO</h3>
+                    <h3 class="n-expert">Excursiones</h3>
                 </div>
                 <div class="cont-expert">
                     <img src="img/security.svg" alt="">
-                    <h3 class="n-expert">Security</h3>
+                    <h3 class="n-expert">Hoteles</h3>
                 </div>
             </section>
         </section>
+        
     </main>
 
     <footer id="footer">
         <div class="contenedor footer-content">
                 <div class="contact-us">
-                    <h2 class="brand">AlexCG Design</h2>
-                    <p>Somos expertos en la creación de tus sueños</p>
+                    <h2 class="marca">Grupo 17 - TRAVEL</h2>
+                    <p>Somos expertos en planificar el viaje de tus sueños</p>
                 </div>
+                <!-- Iconos de redes sociales de boxicons -->
                 <div class="social-media">
                     <a href="./" class="social-media-icon">
                         <i class='bx bxl-facebook'></i>
@@ -102,6 +122,7 @@
         </div>
         <div class="line"></div>
     </footer>
+    <script src="js/api.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/lightbox.js"></script>
 </body>
