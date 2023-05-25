@@ -129,7 +129,6 @@ body{
 
 .number{
     display: inline-block;
-    /* 02 */
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     line-height: 30px;
     text-align: center;
@@ -349,9 +348,12 @@ footer{
 @media screen and (max-width: 500px){
     .menu-navegacion{
         width: 65vw;
+        font-size: 25px;
+        background-size: cover;
+        background-position: center;
     }
 
-    .hamburguer{
+  .hamburguer{
         top: 20px;
         right: 20px;
     }
