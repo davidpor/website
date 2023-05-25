@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 17</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="formulario.css">
+    <!-- El sig link se usa para implementar la tipografia elegida -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- El sig link se usa para implementar el icono de menu, equis y los iconos de redes sociales -->
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <!-- las dos lineas siguientes son para implementar vue.js y la libreria axios -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
@@ -77,30 +80,47 @@
                 </div>
             </div>        
         </section> -->
+        
         <div class="imagen-light">
             <img src="img/close.svg" alt="" class="close">
             <img src="" alt="" class="agregar-imagen">
         </div>
+        <!-- figuras isometricas descargadas de https://www.manypixels.co/gallery -->
         <section class="contenedor" id="expertos">
-            <h2 class="subtitulo">Expertos en:</h2>
+            <h2 class="subtitulo">Especializados en:</h2>
             <section class="experts">
                 <div class="cont-expert">
-                    <img src="img/pie_chart.svg" alt="">
+                    <img src="img/viajes.svg" alt="">
                     <h3 class="n-expert">Viajes</h3>
                 </div>
                 <div class="cont-expert">
-                    <img src="img/search_engine.svg" alt="">
+                    <img src="img/excursiones.svg" alt="">
                     <h3 class="n-expert">Excursiones</h3>
                 </div>
                 <div class="cont-expert">
-                    <img src="img/security.svg" alt="">
+                    <img src="img/hoteles.svg" alt="">
                     <h3 class="n-expert">Hoteles</h3>
                 </div>
             </section>
         </section>
         
     </main>
-
+    <section class="formulario" id="galeria"">
+        <h2 class="subtitulo">Contacto</h2>
+        <form action="" method="">
+            <label for="nombre">Nombre y apellido:</label>
+            <!-- validacion de los campos usando expresiones regulares -->
+            <input type="text" id="nombre" name="nombre" required pattern="^[a-zA-Z ]+$" title="Por favor. ingresa nombre y apellido">
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, ingresa una dirección de correo electrónico válida">
+    
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
     <footer id="footer">
         <div class="contenedor footer-content">
                 <div class="contact-us">

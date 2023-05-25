@@ -22,7 +22,7 @@ body{
 
 .header{
     height: 100vh;
-    /* 02 */
+    /* Para el efecto en la imagen, se toma el color de la pagina https://webgradients.com   */
     background-image: linear-gradient(to top, rgba(251, 194, 235, 0.397) 0%, hsla(218, 68%, 79%, 0.397) 100%), url(img/cabildo.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -179,11 +179,12 @@ body{
     border-radius: 10px;
     transition: transform .3s .2s;
 }
+/* para que aparezca la imagen al hacer click en la imagen */
 
 .showImage{
     transform: scale(1);
 }
-
+/* para que aparezca el contenedor al hacer click en la imagen */
 .show{
     transform: translate(0);
 }
@@ -300,7 +301,7 @@ footer{
         font-size: 40px;
     }
 
-    .contenedor-servicio img{
+    .contenedor-servicio img{expert
         width: 80%;
         margin-bottom: 40px;
     }
