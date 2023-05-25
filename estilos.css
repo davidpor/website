@@ -301,7 +301,8 @@ footer{
         font-size: 40px;
     }
 
-    .contenedor-servicio img{expert
+    /* .contenedor-servicio img{expert */
+    .contenedor-servicio{
         width: 80%;
         margin-bottom: 40px;
     }
