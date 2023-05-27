@@ -26,7 +26,6 @@ form {
 
   input[type="submit"] {
     background-color: #9f8ad0;
-    /* background-color: #4CAF50; */
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -37,5 +36,4 @@ form {
   input[type="submit"]:hover {
   background-color: #fff;
   color:#764ba2;
-    /* background-color: #45a049; */
   }
